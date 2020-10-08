@@ -1,0 +1,23 @@
+.form-column {
+    max-width: 650px;
+    margin-top: 15px;
+}
+
+.contact-pic {
+    width: 175px;
+    height: 175px;
+    margin: 20px auto;
+    border: 1px solid gray;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    display: flex;
+}
+
+.contact-pic:hover {
+    opacity: 0.6;
+}
