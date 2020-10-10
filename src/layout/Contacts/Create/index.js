@@ -45,6 +45,8 @@ const CreateContact = ({
 
   const onSubmit = (e) => {
     e.preventDefault();
+    console.log("loading", loading);
+    console.log("data", data);
     createContact(form);
   };
 
@@ -89,7 +91,7 @@ const CreateContact = ({
                   )}
                   <Icon onClick={choseImage} name="pencil" />
                 </div>
-                <Form.Group widths={2}>
+                <Form.Group widths={2} style={{ marginBottom: "10px" }}>
                   <Form.Input
                     label="First Name"
                     name="firstName"
@@ -103,7 +105,7 @@ const CreateContact = ({
                     placeholder="Last Name"
                   />
                 </Form.Group>
-                <Form.Group widths={2}>
+                <Form.Group widths={2} style={{ marginBottom: "10px" }}>
                   <Form.Input
                     label="Country"
                     name="countryCode"

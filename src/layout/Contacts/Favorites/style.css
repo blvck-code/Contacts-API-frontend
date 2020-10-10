@@ -1,0 +1,28 @@
+.slide-container {
+  display: flex;
+  align-items: center;
+  max-width: 57rem;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.items-container {
+  display: flex;
+  overflow-y: hidden;
+  justify-content: center;
+  margin: 0px 4px 15px;
+}
+
+.items-container::-webkit-scrollbar {
+  display: none;
+}
+
+.single-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  min-width: 10rem;
+}

@@ -1,17 +1,19 @@
 import React from "react";
 import {
   Container,
-  Image,
+  Header,
   List,
   Message,
   Placeholder,
 } from "semantic-ui-react";
-import Header from "../../../component/Header";
+import AppHeader from "../../../component/Header";
+import ImageThumb from "../../../component/ImageThumb";
+import Favorites from "../Favorites";
 
 const ContactsListUI = ({ state: { contacts, loading, error } }) => {
   return (
     <>
-      <Header />
+      <AppHeader />
       <Container>
         <span
           style={{
@@ -24,28 +26,16 @@ const ContactsListUI = ({ state: { contacts, loading, error } }) => {
           This project is still being developed
         </span>
 
+        <Header>STARRED</Header>
+        <Favorites
+          favorites={contacts.filter((item) => item.is_favorite)}
+          loading={loading}
+        />
+
+        <Header>ALL</Header>
+
         {loading && (
           <Placeholder>
-            <Placeholder.Header image>
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Header>
-            <Placeholder.Paragraph>
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Paragraph>
-            <Placeholder.Header image>
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Header>
-            <Placeholder.Paragraph>
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-              <Placeholder.Line />
-            </Placeholder.Paragraph>
             <Placeholder.Header image>
               <Placeholder.Line />
               <Placeholder.Line />
@@ -81,11 +71,12 @@ const ContactsListUI = ({ state: { contacts, loading, error } }) => {
                   <span>{contact.phone_number}</span>
                 </List.Content>
                 <List.Content style={{ display: "flex", alignItems: "center" }}>
-                  <img
+                  <ImageThumb
+                    firstName={contact.first_name}
+                    lastName={contact.last_name}
                     style={{ borderRadius: "50%" }}
                     src={contact.contact_pic}
-                    height={45}
-                    width={45}
+                    style={{ width: 45, height: 45 }}
                   />
                   {/* <Image circular height={45} width={45} scr={contact.contact_pic} /> */}
                   <span>
