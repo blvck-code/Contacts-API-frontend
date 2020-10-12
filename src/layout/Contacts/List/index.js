@@ -15,16 +15,6 @@ const ContactsListUI = ({ state: { contacts, loading, error } }) => {
     <>
       <AppHeader />
       <Container>
-        <span
-          style={{
-            backgroundColor: "red",
-            padding: "10px 20px",
-            margin: "0 auto",
-            width: "100vw",
-            color: "#fff",
-          }}>
-          This project is still being developed
-        </span>
 
         <Header>STARRED</Header>
         <Favorites
