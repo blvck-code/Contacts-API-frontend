@@ -57,16 +57,6 @@ const CreateContact = ({
         message="You have unsaved changes, sure you want to leave ?"
       />
       <Header />
-      <span
-        style={{
-          backgroundColor: "red",
-          padding: "10px 20px",
-          margin: "0 auto",
-          width: "100vw",
-          color: "#fff",
-        }}>
-        This project is still being developed
-      </span>
       <Grid centered>
         <Grid.Column className="form-column">
           <SemanticHeader>Create Contact</SemanticHeader>
